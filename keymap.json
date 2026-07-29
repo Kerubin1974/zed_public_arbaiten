@@ -1,0 +1,43 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift shift": "file_finder::Toggle", // поиск файла
+      "ctrl-alt-f": "text_finder::Toggle", // поиск в стиле vim Telescope
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+        // "ctrl-s": "workspace::Save", // сохранение файла в режиме вставки
+        // В редакторе Zed нет встроенного массива для последовательного выполнения нескольких независимых действий по одному нажатию. Однако вы можете обойти это, используя workspace::SendKeystrokes. Эта функция имитирует ввод с клавиатуры, позволяя запускать цепочки команд (включая команды режима Vim и интерфейса Zed).
+        "ctrl-s": ["workspace::SendKeystrokes", "escape : w enter"], // Быстрое сохранение и форматирование (имитация :w и встроенного сохранения в Zed)
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-f2": "editor::ToggleBookmark"
+    },
+    "bindings": {
+      "f2": "editor::GoToNextBookmark",
+      "ctrl-f2": "editor::ToggleBookmark",
+      "ctrl-l": ["editor::SelectNext", { "replace_newest": false }], // выделить слово
+      "f4": "debugger::Start",
+      "shift-f5": "debugger::Stop",
+      "ctrl-shift-f5": "debugger::RerunSession",
+      "f6": "debugger::Pause",
+      "f10": "debugger::StepOver",
+      "shift-f11": "debugger::StepOut",
+      "f11": "debugger::StepInto",
+    }
+  }
+]

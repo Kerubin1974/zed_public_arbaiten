@@ -1,0 +1,66 @@
+{
+  "Console Log": {
+    "prefix": "log",
+    "body": [
+      "console.log($1);",
+      "$0"
+    ],
+    "description": "выводит в консоль console.log"
+  },
+  "Console Log Warning": {
+    "prefix": "logw",
+    "body": [
+      "console.warn($1);",
+      "$0"
+    ],
+    "description": "выводит в консоль console.warn"
+  },
+  "Console Log Error": {
+    "prefix": "loge",
+    "body": [
+      "console.error($1);",
+      "$0"
+    ],
+    "description": "выводит в консоль console.error"
+  },
+  "Console Log Table": {
+    "prefix": "logt",
+    "body": [
+      "console.table($1);",
+      "$0"
+    ],
+    "description": "выводит в консоль console.table"
+  },
+  "Arrow Function": {
+    "prefix": "afn",
+    "body": [
+      "const ${1:name} = (${2:params}) => {",
+      "\t$0",
+      "};"
+    ],
+    "description": "Create an ES6 arrow function"
+  },
+  "цикл switch": {
+    "prefix": "switch",
+    "body": [
+      "switch ($1) {",
+      "\tcase $2:",
+      "\t\tbreak;",
+      "\tdefault:",
+      "\t\tbreak;",
+      "}"
+    ],
+    "description": "Create a switch statement"
+  },
+  "обратка ошибок try...catch": {
+    "prefix": "trycatch",
+    "body": [
+      "try {",
+      "\t$0",
+      "} catch (error) {",
+      "\t",
+      "}"
+    ],
+    "description": "Create a try...catch block"
+  }
+}

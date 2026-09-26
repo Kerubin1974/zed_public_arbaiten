@@ -23,6 +23,12 @@
     },
   },
   {
+      "context": "Editor && vim_mode == normal",
+      "bindings": {
+          "ctrl-b": "workspace::ToggleLeftDock" // скрыть или показать левую панель. Ctrl + B по умолчанию перехватывается самим Vim
+      }
+  },
+  {
     "context": "Editor",
     "unbind": {
       "ctrl-f2": "editor::ToggleBookmark"
@@ -38,6 +44,11 @@
       "f10": "debugger::StepOver",
       "shift-f11": "debugger::StepOut",
       "f11": "debugger::StepInto",
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-alt-right": "workspace::MoveItemToPaneInDirection"
     }
   }
 ]

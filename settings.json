@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "edit_predictions": {
+        "provider": "zed"
+    },
     "minimap": {
         "show": "always",
     },
@@ -14,11 +17,11 @@
     "remove_trailing_whitespace_on_save": true, // удаляет пробелы в конце строки при сохранении файла.
     "ensure_final_newline_on_save": false, // добавляет пустую строку в конце файла при сохранении.
     "cli_default_open_behavior": "existing_window",
-    "terminal": {
-        "shell": {
-            "program": "C:\\Program Files\\Git\\bin\\bash.exe",
-        },
-    },
+    // "terminal": {
+    //     "shell": {
+    //         "program": "C:\\Program Files\\Git\\bin\\bash.exe",
+    //     },
+    // },
     "project_panel": {
         "dock": "left",
     },
